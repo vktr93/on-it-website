@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On-IT | Votre Partenaire Informatique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .nav-link.active {
+            color: #60a5fa; /* A light blue for the active link */
+        }
+        .lang-btn.active {
+            color: #60a5fa;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-blue-500/10">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img class="h-8 w-auto" src="logo.png" alt="On-IT Logo" onerror="this.onerror=null;this.src='https://placehold.co/100x32/111827/ffffff?text=On-IT';">
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 active" data-key="navAbout">À propos</a>
+                        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" data-key="navServices">Services</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200" data-key="navContact">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                     <div class="text-sm">
+                        <button class="lang-btn active p-1" data-lang="fr">FR</button>
+                        <span class="text-gray-500">|</span>
+                        <button class="lang-btn p-1" data-lang="tr">TR</button>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                        <button id="mobile-menu-button" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                             <svg class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 active" data-key="navAboutMobile">À propos</a>
+                <a href="#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700" data-key="navServicesMobile">Services</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700" data-key="navContactMobile">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="section active">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center">
+                    <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl" data-key="aboutTitle">À Propos d'<span class="text-blue-400">On-IT</span></h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400" data-key="aboutSubtitle">Votre partenaire de confiance pour des solutions informatiques complètes, de l'installation initiale au support quotidien.</p>
+                </div>
+
+                <div class="mt-20 max-w-4xl mx-auto text-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-blue-400" data-key="aboutWhoWeAre">Qui sommes-nous ?</h2>
+                        <p class="mt-4 text-lg text-gray-300 text-left md:text-center" data-key="aboutDescription">
+                            Fondée en 2020 par Onur KILINC, On-IT est une société de services informatiques dédiée à fournir des solutions robustes et sur-mesure pour les entreprises. Fort d'une expérience significative acquise chez des clients prestigieux comme Thales, L'ORÉAL et NATIXIS, notre expertise couvre l'ensemble de l'infrastructure IT, de la gestion de serveurs et réseaux à la sécurité et au support utilisateur. Notre mission est de garantir la performance, la sécurité et la pérennité de votre système d'information.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-20">
+                    <h2 class="text-3xl font-bold text-center text-white" data-key="aboutClients">Ils nous ont fait confiance</h2>
+                    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div class="flex justify-center items-center bg-gray-800 p-6 rounded-lg">
+                            <img class="h-10 object-contain" src="Natixis.png" alt="Natixis Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x40/1f2937/9ca3af?text=NATIXIS';">
+                        </div>
+                        <div class="flex justify-center items-center bg-gray-800 p-6 rounded-lg">
+                            <img class="h-10 object-contain" src="Cyrus_conseil.png" alt="Cyrus Conseil Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x40/1f2937/9ca3af?text=Cyrus+Conseil';">
+                        </div>
+                        <div class="flex justify-center items-center bg-gray-800 p-6 rounded-lg">
+                             <img class="h-12 object-contain" src="Groupe_DHS.png" alt="Groupe D.H.S Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x40/1f2937/9ca3af?text=Groupe+DHS';">
+                        </div>
+                        <div class="flex justify-center items-center bg-gray-800 p-6 rounded-lg">
+                            <img class="h-10 object-contain" src="Projective.png" alt="Projective Group Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x40/1f2937/9ca3af?text=Projective';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center">
+                    <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl" data-key="servicesTitle">Nos <span class="text-blue-400">Services</span></h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400" data-key="servicesSubtitle">Une offre complète pour externaliser la gestion de votre parc informatique en toute sérénité.</p>
+                </div>
+                <div class="mt-16 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white" data-key="serviceStarlinkTitle">Installation Starlink</h3>
+                        <p class="mt-2 text-gray-400" data-key="serviceStarlinkDesc">Déploiement de solutions internet haut débit par satellite pour les zones mal desservies, garantissant une connexion fiable et performante.</p>
+                    </div>
+                     <!-- Service Card 2 -->
+                    <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white" data-key="serviceServerTitle">Installation Serveurs</h3>
+                        <p class="mt-2 text-gray-400" data-key="serviceServerDesc">Mise en place et configuration de serveurs physiques (Windows Server) et virtuels (VMware, Hyper-V) avec gestion Active Directory.</p>
+                    </div>
+                     <!-- Service Card 3 -->
+                    <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4a5 5 0 0 0-5-5l-4 4a5 5 0 0 0 5 5l4-4Z"/><path d="M16.5 14.6L18 13l-4-4-1.4 1.4"/><path d="M8.5 4.6L7 6l4 4 1.4-1.4"/><path d="M20 2l-2 2"/><path d="M21 8a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2Z"/><path d="M3 16a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2Z"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white" data-key="serviceNetworkTitle">Configuration Réseau</h3>
+                        <p class="mt-2 text-gray-400" data-key="serviceNetworkDesc">Conception et déploiement d'infrastructures réseau performantes : Switchs, pare-feux (Fortigate) et bornes Wi-Fi professionnelles.</p>
+                    </div>
+                     <!-- Service Card 4 -->
+                    <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white" data-key="serviceSecurityTitle">Sécurité</h3>
+                        <p class="mt-2 text-gray-400" data-key="serviceSecurityDesc">Protection de votre réseau (Antivirus, Barracuda) et de vos locaux (caméras). Solutions de sauvegarde fiables (Veeam, Arcserve).</p>
+                    </div>
+                     <!-- Service Card 5 -->
+                    <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white" data-key="serviceMessagingTitle">Messagerie</h3>
+                        <p class="mt-2 text-gray-400" data-key="serviceMessagingDesc">Déploiement et migration de serveurs de messagerie professionnels (Exchange, Lotus, Office 365) avec configuration avancée.</p>
+                    </div>
+                     <!-- Service Card 6 -->
+                    <div class="bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-white" data-key="serviceSupportTitle">Support Informatique</h3>
+                        <p class="mt-2 text-gray-400" data-key="serviceSupportDesc">Assistance réactive pour les utilisateurs (y compris VIP), maintenance préventive du parc et gestion des incidents via système de ticketing (GLPI).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                 <div class="text-center">
+                    <h1 class="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl" data-key="contactTitle">Contactez-<span class="text-blue-400">Nous</span></h1>
+                    <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400" data-key="contactSubtitle">Discutons de votre projet. Nous sommes prêts à vous accompagner.</p>
+                </div>
+
+                <div class="mt-16 max-w-lg mx-auto grid grid-cols-1 md:max-w-3xl md:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col justify-between">
+                         <div>
+                            <h2 class="text-2xl font-bold text-white" data-key="contactInfoTitle">Nos Coordonnées</h2>
+                            <div class="mt-6 space-y-4">
+                                <div class="flex items-center">
+                                    <svg class="h-6 w-6 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    <a href="tel:+33660335207" class="ml-3 text-gray-300 hover:text-white">06 60 33 52 07</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg class="h-6 w-6 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                    <a href="mailto:contact@on-it.fr" class="ml-3 text-gray-300 hover:text-white">contact@on-it.fr</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <a href="CV Onur KILINC.pdf" download data-key="downloadCV" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-gray-900">
+                                <svg class="-ml-1 mr-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                                Télécharger mon CV
+                            </a>
+                        </div>
+                    </div>
+                     <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                        <form action="#">
+                            <div class="grid grid-cols-1 gap-y-6">
+                                <div>
+                                    <label for="full-name" class="sr-only" data-key="formName">Nom complet</label>
+                                    <input type="text" name="full-name" id="full-name" autocomplete="name" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-700 border-gray-600 rounded-md text-white focus:ring-blue-500 focus:border-blue-500" data-placeholder-key="formNamePlaceholder">
+                                </div>
+                                <div>
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input id="email" name="email" type="email" autocomplete="email" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-700 border-gray-600 rounded-md text-white focus:ring-blue-500 focus:border-blue-500" data-placeholder-key="formEmailPlaceholder">
+                                </div>
+                                <div>
+                                    <label for="message" class="sr-only" data-key="formMessage">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-700 border-gray-600 rounded-md text-white focus:ring-blue-500 focus:border-blue-500" data-placeholder-key="formMessagePlaceholder"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:ring-offset-gray-800" data-key="formSubmit">Envoyer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
+            <p data-key="footerText">© 2025 On-IT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                navAbout: "À propos",
+                navServices: "Services",
+                navContact: "Contact",
+                navAboutMobile: "À propos",
+                navServicesMobile: "Services",
+                navContactMobile: "Contact",
+                aboutTitle: "À Propos d'On-IT",
+                aboutSubtitle: "Votre partenaire de confiance pour des solutions informatiques complètes, de l'installation initiale au support quotidien.",
+                aboutWhoWeAre: "Qui sommes-nous ?",
+                aboutDescription: "Fondée en 2020 par Onur KILINC, On-IT est une société de services informatiques dédiée à fournir des solutions robustes et sur-mesure pour les entreprises. Fort d'une expérience significative acquise chez des clients prestigieux comme Thales, L'ORÉAL et NATIXIS, notre expertise couvre l'ensemble de l'infrastructure IT, de la gestion de serveurs et réseaux à la sécurité et au support utilisateur. Notre mission est de garantir la performance, la sécurité et la pérennité de votre système d'information.",
+                aboutClients: "Ils nous font confiance",
+                servicesTitle: "Nos Services",
+                servicesSubtitle: "Une offre complète pour externaliser la gestion de votre parc informatique en toute sérénité.",
+                serviceStarlinkTitle: "Installation Starlink",
+                serviceStarlinkDesc: "Déploiement de solutions internet haut débit par satellite pour les zones mal desservies, garantissant une connexion fiable et performante.",
+                serviceServerTitle: "Installation Serveurs",
+                serviceServerDesc: "Mise en place et configuration de serveurs physiques (Windows Server) et virtuels (VMware, Hyper-V) avec gestion Active Directory.",
+                serviceNetworkTitle: "Configuration Réseau",
+                serviceNetworkDesc: "Conception et déploiement d'infrastructures réseau performantes : Switchs, pare-feux (Fortigate) et bornes Wi-Fi professionnelles.",
+                serviceSecurityTitle: "Sécurité",
+                serviceSecurityDesc: "Protection de votre réseau (Antivirus, Barracuda) et de vos locaux (caméras). Solutions de sauvegarde fiables (Veeam, Arcserve).",
+                serviceMessagingTitle: "Messagerie",
+                serviceMessagingDesc: "Déploiement et migration de serveurs de messagerie professionnels (Exchange, Lotus, Office 365) avec configuration avancée.",
+                serviceSupportTitle: "Support Informatique",
+                serviceSupportDesc: "Assistance réactive pour les utilisateurs (y compris VIP), maintenance préventive du parc et gestion des incidents via système de ticketing (GLPI).",
+                contactTitle: "Contactez-Nous",
+                contactSubtitle: "Discutons de votre projet. Nous sommes prêts à vous accompagner.",
+                contactInfoTitle: "Nos Coordonnées",
+                downloadCV: "Télécharger mon CV",
+                formName: "Nom complet",
+                formNamePlaceholder: "Votre nom complet",
+                formEmailPlaceholder: "Votre email",
+                formMessage: "Message",
+                formMessagePlaceholder: "Votre message...",
+                formSubmit: "Envoyer",
+                footerText: "© 2025 On-IT. Tous droits réservés."
+            },
+            tr: {
+                navAbout: "Hakkında",
+                navServices: "Hizmetler",
+                navContact: "İletişim",
+                navAboutMobile: "Hakkında",
+                navServicesMobile: "Hizmetler",
+                navContactMobile: "İletişim",
+                aboutTitle: "On-IT Hakkında",
+                aboutSubtitle: "İlk kurulumdan günlük desteğe kadar eksiksiz BT çözümlerini için güvenilir ortağınız.",
+                aboutWhoWeAre: "Biz Kimiz?",
+                aboutDescription: "2020 yılında Onur KILINÇ tarafından kurulan On-IT, işletmelere sağlam ve özel BT çözümleri sunmaya adanmış bir bilişim hizmetleri şirketidir. Thales, L'ORÉAL ve NATIXIS gibi prestijli müşterilerde edinilen önemli deneyimlerle, uzmanlığımız sunucu ve ağ yönetiminden güvenlik ve kullanıcı desteğine kadar tüm BT altyapısını kapsamaktadır. Misyonumuz, bilgi sisteminizin performansını, güvenliğini ve sürekliliğini sağlamaktır.",
+                aboutClients: "Bize Güvenenler",
+                servicesTitle: "Hizmetlerimiz",
+                servicesSubtitle: "BT parkınızın yönetimini gönül rahatlığıyla dış kaynak olarak kullanmanız için eksiksiz bir teklif.",
+                serviceStarlinkTitle: "Starlink Kurulumu",
+                serviceStarlinkDesc: "İnternet erişimi kısıtlı bölgeler için uydu tabanlı yüksek hızlı internet çözümlerinin kurulumu, güvenilir ve yüksek performanslı bir bağlantı sağlar.",
+                serviceServerTitle: "Sunucu Kurulumu",
+                serviceServerDesc: "Active Directory yönetimi ile fiziksel (Windows Server) ve sanal (VMware, Hyper-V) sunucuların kurulumu ve yapılandırılması.",
+                serviceNetworkTitle: "Ağ Yapılandırması",
+                serviceNetworkDesc: "Yüksek performanslı ağ altyapılarının tasarımı ve kurulumu: Switch'ler, güvenlik duvarları (Fortigate) ve profesyonel Wi-Fi erişim noktaları.",
+                serviceSecurityTitle: "Güvenlik",
+                serviceSecurityDesc: "Ağınızın (Antivirüs, Barracuda) ve binalarınızın (kameralar) korunması. Güvenilir yedekleme çözümleri (Veeam, Arcserve).",
+                serviceMessagingTitle: "E-posta Sistemleri",
+                serviceMessagingDesc: "Gelişmiş yapılandırma ile profesyonel e-posta sunucularının (Exchange, Lotus, Office 365) kurulumu ve geçişi.",
+                serviceSupportTitle: "BT Desteği",
+                serviceSupportDesc: "Kullanıcılar için hızlı destek (VIP dahil), proaktif park bakımı ve bilet sistemi (GLPI) aracılığıyla olay yönetimi.",
+                contactTitle: "Bize Ulaşın",
+                contactSubtitle: "Projenizi konuşalım. Size eşlik etmeye hazırız.",
+                contactInfoTitle: "İletişim Bilgilerimiz",
+                downloadCV: "CV'mi İndir",
+                formName: "Tam ad",
+                formNamePlaceholder: "Tam adınız",
+                formEmailPlaceholder: "E-posta adresiniz",
+                formMessage: "Mesaj",
+                formMessagePlaceholder: "Mesajınız...",
+                formSubmit: "Gönder",
+                footerText: "© 2025 On-IT. Tüm hakları saklıdır."
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section');
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcons = mobileMenuButton.querySelectorAll('svg');
+
+            // --- Page Navigation ---
+            function updateActiveLink(targetId) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${targetId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            function showSection(targetId) {
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+                updateActiveLink(targetId);
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    showSection(targetId);
+                    // Close mobile menu on link click
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                         mobileMenuIcons[0].classList.remove('hidden');
+                         mobileMenuIcons[1].classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Show initial section based on hash or default to 'about'
+            const initialSection = window.location.hash ? window.location.hash.substring(1) : 'about';
+            showSection(initialSection);
+
+            // --- Language Switcher ---
+            function changeLanguage(lang) {
+                const translation = translations[lang];
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('[data-key]').forEach(el => {
+                    const key = el.dataset.key;
+                    if (translation[key]) {
+                        el.textContent = translation[key];
+                    }
+                });
+                
+                document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+                    const key = el.dataset.placeholderKey;
+                    if (translation[key]) {
+                        el.placeholder = translation[key];
+                    }
+                });
+
+                langButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.lang === lang) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    changeLanguage(button.dataset.lang);
+                });
+            });
+
+            // Set initial language
+            changeLanguage('fr');
+
+            // --- Mobile Menu Toggle ---
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuIcons.forEach(icon => icon.classList.toggle('hidden'));
+            });
+
+        });
+
+    </script>
+</body>
+</html>
+
